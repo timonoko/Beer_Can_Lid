@@ -3,5 +3,5 @@ Beer can with screw top
 
 <img src=can.png>
 
-<img src=osacd.png>
+<img src=oscad.png>
 
