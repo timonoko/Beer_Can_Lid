@@ -55,10 +55,12 @@ module korkki() {
   }
 }
 
-//perry=0.25; // perry on isompi
-perry=0 //kumirengasta kun venyttää toimii paremmin
+perry=0; //Lidlin perry-tölkki on 0.25 mm paksumpi
 tolkki=59.5;
 pullennus=0.6+perry;
+
+module kumirengas(); // Rengas TPUsta
+  rotate_extrude() translate([tolkki/2-3.5/2+pullennus,0,0])  circle(d=3.5-0.2);
 
 module uuspohja() {
   difference(){
@@ -80,5 +82,6 @@ module tiiviste () {
 }
 
 //kansi();
-uuspohja();
+//uuspohja();
 //tiiviste();
+kumirengas();
